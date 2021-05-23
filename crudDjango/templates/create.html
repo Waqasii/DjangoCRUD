@@ -22,7 +22,8 @@
             </ul>
             {% endif %}
 
-            <form method="POST">
+            <form method="POST" action="{% url 'store' %}">
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="exampleinputEmail">Employee Email</label>
                     <input class="form-control" type="email" id="emp_email" placeholder="Enter Email" name="emp_email">
